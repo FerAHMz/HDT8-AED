@@ -5,7 +5,22 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 
+/**
+ * Clase principal que ejecuta la aplicación para manejar una cola de emergencias.
+ * Esta aplicación lee un archivo de texto con información sobre pacientes,
+ * los inserta en un montículo (heap) según su prioridad de emergencia y luego los atiende en orden.
+ */
 public class Main {
+    /**
+     * Método principal que ejecuta la aplicación.
+     * 
+     * Lee un archivo "pacientes.txt" ubicado en el directorio "hdt8" del proyecto. Cada línea del archivo
+     * debe contener los datos de un paciente, separados por comas en el formato: nombre, síntoma, código de emergencia.
+     * Los pacientes se insertan en una cola de prioridad implementada mediante un montículo (heap),
+     * y se atienden en orden según su prioridad.
+     * 
+     * @param args Argumentos de la línea de comandos (no se utilizan en esta aplicación).
+     */
     public static void main(String[] args) {
         VectorHeap<Paciente> colaEmergencias = new VectorHeap<>();
 
